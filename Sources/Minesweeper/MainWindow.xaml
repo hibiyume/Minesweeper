@@ -1,0 +1,148 @@
+﻿<Window x:Class="Minesweeper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Minesweeper"
+        mc:Ignorable="d"
+        Title="Minesweeper"
+        Icon="Icon.ico"
+        Height="570" Width="450">
+    <Window.Background>LightGray</Window.Background>
+    <Window.ResizeMode>NoResize</Window.ResizeMode>
+    <StackPanel Margin="2">
+        <!--Info grid-->
+        <Grid>
+            <!--Bombs left-->
+            <Grid Margin="40, 0">
+                <Rectangle Fill="Gray" Height="70" Width="95" HorizontalAlignment="Left" Margin="27, 23" VerticalAlignment="Center"/>
+                <Rectangle Fill="LightGray" Height="65" Width="90" HorizontalAlignment="Left" Margin="29, 23" VerticalAlignment="Center"/>
+                <TextBlock Name="tbBombs" Text="00" FontSize="72" HorizontalAlignment="Left" Margin="35 , 5" Foreground="Red" ToolTip="Bombs Count" />
+            </Grid>
+
+            <!--Smile (Game restart)-->
+            <Button Name="bRestart" PreviewMouseLeftButtonDown="RestartGame" Height="80" Width="100" HorizontalAlignment="Right" Margin="65, 0" ToolTip="Restart Game">
+                <Image
+                    Source="Images\Smile.png"
+                    HorizontalAlignment="Center" />
+            </Button>
+        </Grid>
+
+        <!--Game field-->
+        <Grid Name="gGameField" Margin="20" Height="370" Width="370">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!--Buttons (Cells)-->
+            <Button Name="_00" Grid.Column="0" Grid.Row="0" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_01" Grid.Column="0" Grid.Row="1" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_02" Grid.Column="0" Grid.Row="2" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_03" Grid.Column="0" Grid.Row="3" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_04" Grid.Column="0" Grid.Row="4" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_05" Grid.Column="0" Grid.Row="5" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_06" Grid.Column="0" Grid.Row="6" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_07" Grid.Column="0" Grid.Row="7" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_08" Grid.Column="0" Grid.Row="8" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+
+            <Button Name="_10" Grid.Column="1" Grid.Row="0" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_11" Grid.Column="1" Grid.Row="1" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_12" Grid.Column="1" Grid.Row="2" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_13" Grid.Column="1" Grid.Row="3" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_14" Grid.Column="1" Grid.Row="4" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_15" Grid.Column="1" Grid.Row="5" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_16" Grid.Column="1" Grid.Row="6" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_17" Grid.Column="1" Grid.Row="7" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_18" Grid.Column="1" Grid.Row="8" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+
+            <Button Name="_20" Grid.Column="2" Grid.Row="0" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_21" Grid.Column="2" Grid.Row="1" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_22" Grid.Column="2" Grid.Row="2" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_23" Grid.Column="2" Grid.Row="3" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_24" Grid.Column="2" Grid.Row="4" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_25" Grid.Column="2" Grid.Row="5" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_26" Grid.Column="2" Grid.Row="6" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_27" Grid.Column="2" Grid.Row="7" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_28" Grid.Column="2" Grid.Row="8" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+
+            <Button Name="_30" Grid.Column="3" Grid.Row="0" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_31" Grid.Column="3" Grid.Row="1" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_32" Grid.Column="3" Grid.Row="2" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_33" Grid.Column="3" Grid.Row="3" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_34" Grid.Column="3" Grid.Row="4" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_35" Grid.Column="3" Grid.Row="5" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_36" Grid.Column="3" Grid.Row="6" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_37" Grid.Column="3" Grid.Row="7" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_38" Grid.Column="3" Grid.Row="8" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+
+            <Button Name="_40" Grid.Column="4" Grid.Row="0" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_41" Grid.Column="4" Grid.Row="1" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_42" Grid.Column="4" Grid.Row="2" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_43" Grid.Column="4" Grid.Row="3" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_44" Grid.Column="4" Grid.Row="4" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_45" Grid.Column="4" Grid.Row="5" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_46" Grid.Column="4" Grid.Row="6" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_47" Grid.Column="4" Grid.Row="7" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_48" Grid.Column="4" Grid.Row="8" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+
+            <Button Name="_50" Grid.Column="5" Grid.Row="0" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_51" Grid.Column="5" Grid.Row="1" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_52" Grid.Column="5" Grid.Row="2" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_53" Grid.Column="5" Grid.Row="3" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_54" Grid.Column="5" Grid.Row="4" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_55" Grid.Column="5" Grid.Row="5" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_56" Grid.Column="5" Grid.Row="6" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_57" Grid.Column="5" Grid.Row="7" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_58" Grid.Column="5" Grid.Row="8" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+
+            <Button Name="_60" Grid.Column="6" Grid.Row="0" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_61" Grid.Column="6" Grid.Row="1" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_62" Grid.Column="6" Grid.Row="2" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_63" Grid.Column="6" Grid.Row="3" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_64" Grid.Column="6" Grid.Row="4" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_65" Grid.Column="6" Grid.Row="5" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_66" Grid.Column="6" Grid.Row="6" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_67" Grid.Column="6" Grid.Row="7" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_68" Grid.Column="6" Grid.Row="8" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+
+            <Button Name="_70" Grid.Column="7" Grid.Row="0" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_71" Grid.Column="7" Grid.Row="1" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_72" Grid.Column="7" Grid.Row="2" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_73" Grid.Column="7" Grid.Row="3" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_74" Grid.Column="7" Grid.Row="4" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_75" Grid.Column="7" Grid.Row="5" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_76" Grid.Column="7" Grid.Row="6" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_77" Grid.Column="7" Grid.Row="7" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_78" Grid.Column="7" Grid.Row="8" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+
+            <Button Name="_80" Grid.Column="8" Grid.Row="0" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_81" Grid.Column="8" Grid.Row="1" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_82" Grid.Column="8" Grid.Row="2" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_83" Grid.Column="8" Grid.Row="3" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_84" Grid.Column="8" Grid.Row="4" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_85" Grid.Column="8" Grid.Row="5" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_86" Grid.Column="8" Grid.Row="6" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_87" Grid.Column="8" Grid.Row="7" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+            <Button Name="_88" Grid.Column="8" Grid.Row="8" PreviewMouseLeftButtonDown="OnCellClick" PreviewMouseRightButtonDown="OnFlagPlaced" />
+        </Grid>
+    </StackPanel>
+</Window>

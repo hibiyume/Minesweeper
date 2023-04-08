@@ -1,0 +1,23 @@
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\bin\Release\net7.0-windows\Minesweeper of Disabled.exe
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\bin\Release\net7.0-windows\Minesweeper of Disabled.deps.json
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\bin\Release\net7.0-windows\Minesweeper of Disabled.runtimeconfig.json
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\bin\Release\net7.0-windows\Minesweeper of Disabled.dll
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\bin\Release\net7.0-windows\Minesweeper of Disabled.pdb
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\obj\Release\net7.0-windows\Minesweeper of Disabled.csproj.AssemblyReference.cache
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\obj\Release\net7.0-windows\MainWindow.g.cs
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\obj\Release\net7.0-windows\Win.g.cs
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\obj\Release\net7.0-windows\App.g.cs
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\obj\Release\net7.0-windows\Minesweeper of Disabled_MarkupCompile.cache
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\obj\Release\net7.0-windows\Minesweeper of Disabled_MarkupCompile.lref
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\obj\Release\net7.0-windows\MainWindow.baml
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\obj\Release\net7.0-windows\Win.baml
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\obj\Release\net7.0-windows\Minesweeper of Disabled.g.resources
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\obj\Release\net7.0-windows\Minesweeper of Disabled.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\obj\Release\net7.0-windows\Minesweeper of Disabled.AssemblyInfoInputs.cache
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\obj\Release\net7.0-windows\Minesweeper of Disabled.AssemblyInfo.cs
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\obj\Release\net7.0-windows\Minesweeper of Disabled.csproj.CoreCompileInputs.cache
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\obj\Release\net7.0-windows\Minesweeper of Disabled.dll
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\obj\Release\net7.0-windows\refint\Minesweeper of Disabled.dll
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\obj\Release\net7.0-windows\Minesweeper of Disabled.pdb
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\obj\Release\net7.0-windows\Minesweeper of Disabled.genruntimeconfig.cache
+C:\Users\user\RiderProjects\Minesweeper of Disabled\Minesweeper of Disabled\obj\Release\net7.0-windows\ref\Minesweeper of Disabled.dll

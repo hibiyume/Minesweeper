@@ -1,0 +1,14 @@
+﻿<Window x:Class="Minesweeper.Win"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Minesweeper"
+        mc:Ignorable="d"
+        Title="Nice!" Height="400" Width="440" Background="LightGray">
+        <Window.ResizeMode>NoResize</Window.ResizeMode>
+    <StackPanel Margin="20">
+        <Image Source="Images\Win.png" Width="380"/>
+        <Button Height="40" Width="200" Margin="20" Content="Restart" FontWeight="UltraLight" FontSize="26" PreviewMouseLeftButtonDown="OnRestartButtonClicked"/>
+    </StackPanel>
+</Window>
